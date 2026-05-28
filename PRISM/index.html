@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PRISM programs interactive simulation-ready scenes from monocular images through MLLM-driven code synthesis and physics-in-the-loop refinement.">
+  <meta name="keywords" content="PRISM, embodied simulation, real-to-sim, monocular reconstruction, articulated objects, MLLM, physics-in-the-loop">
+  <meta property="og:title" content="PRISM: Programming Interactive Scenes from Monocular Images for Embodied Simulation">
+  <meta property="og:description" content="A project page for PRISM, a framework for simulation-ready interactive scene generation from a single RGB image.">
+  <meta property="og:image" content="static/images/figure-1-demonstration.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>PRISM: Programming Interactive Scenes from Monocular Images</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <header class="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label="PRISM home">PRISM</a>
+    <nav class="nav-links">
+      <a href="#teaser-video">Video</a>
+      <a href="#demo-visualization">Demo</a>
+      <a href="#method">Method</a>
+      <a href="#benchmark">Benchmark</a>
+      <a href="#results">Results</a>
+      <a href="#bibtex">BibTeX</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="paper-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <p class="reconstruction-note">This website is under reconstruction</p>
+      <div class="hero-inner">
+        <p class="eyebrow">Monocular Real-to-Sim Scene Programming</p>
+        <h1 id="paper-title">
+          <span class="title-part">PRISM:</span>
+          <span class="title-part">Programming</span>
+          <span class="title-part">Interactive</span>
+          <span class="title-part">Scenes</span>
+          <span class="title-part">from Monocular</span>
+          <span class="title-part">Images for</span>
+          <span class="title-part">Embodied</span>
+          <span class="title-part">Simulation</span>
+        </h1>
+        <p class="subtitle">
+          PRISM transforms a single RGB image into executable, simulation-ready interactive scenes with programmable geometry, articulation, physical properties, and scene layout.
+        </p>
+        <p class="authors">
+          Yumeng He, Yichen Song, Xiaotian Yang, Weijia Zhang, Zanwei Zhou, Junru Gong, Xiaokang Yang, Yunbo Wang
+        </p>
+        <p class="affiliation">Shanghai Jiao Tong University</p>
+        <div class="button-row" aria-label="Project links">
+          <a class="button button-primary placeholder-link" href="#" aria-disabled="true">Paper <span>Coming soon</span></a>
+          <a class="button placeholder-link" href="#" aria-disabled="true">Code <span>Coming soon</span></a>
+          <a class="button placeholder-link" href="#" aria-disabled="true">Dataset <span>Coming soon</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaser-video" class="section reveal">
+      <div class="section-heading">
+        <h2>Abstract</h2>
+      </div>
+      <div class="teaser-summary">
+        <p>
+          The advancement of Embodied AI requires high-quality simulation assets that faithfully mirror the physical world. PRISM reformulates monocular scene reconstruction as a procedural programming task for interactive 3D environments. It leverages multimodal large language models to translate a single RGB image into executable programs defining object geometry, articulation, physical properties, and scene layout.
+        </p>
+        <p>
+          To ensure simulation readiness, PRISM introduces a physics-in-the-loop mechanism that executes generated programs in a physics engine and iteratively refines them using simulation feedback. The resulting scenes support stable stacking, fine-grained manipulation, and articulated object interactions that are difficult for open-loop reconstruction pipelines.
+        </p>
+      </div>
+      <figure class="video-panel">
+        <video controls muted playsinline preload="metadata">
+          <source src="asset/figure/teaser_video.mp4" type="video/mp4">
+        </video>
+      </figure>
+    </section>
+
+    <section id="demo-visualization" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Interactive Demo</p>
+        <h2>Inspect generated assets and actuate their articulated parts in the browser.</h2>
+        <blockquote class="demo-note">We are actively adding more demos to this viewer.</blockquote>
+      </div>
+      <div class="demo-shell" data-demo-viewer>
+        <aside class="demo-case-list" data-demo-list aria-label="Demo cases">
+          <div class="demo-loading">Loading demo cases...</div>
+        </aside>
+        <div class="demo-viewer-panel">
+          <div class="demo-viewer-header">
+            <div>
+              <p class="demo-kicker">USD Preview</p>
+              <h3 data-demo-title>Loading demo</h3>
+              <p data-demo-meta>Preparing the interactive viewer.</p>
+            </div>
+            <button class="demo-reset-button" type="button" data-demo-reset>Reset</button>
+          </div>
+          <div class="demo-stage-layout">
+            <div class="demo-stage" data-demo-stage>
+              <div class="demo-stage-placeholder">
+                <span>Loading 3D scene...</span>
+              </div>
+            </div>
+            <aside class="demo-joint-panel" data-joint-panel>
+              <p class="demo-panel-title">Joints</p>
+              <p class="demo-panel-empty">Joint controls appear after a case loads.</p>
+            </aside>
+          </div>
+          <div class="demo-status" data-demo-status>Choose a case to load its simulation-ready asset.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="method" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Method</p>
+        <h2>A two-level closed loop for object validity and scene consistency.</h2>
+      </div>
+      <p class="method-intro">
+        PRISM targets scene-level interactive simulation rather than static reconstruction. It first programs object assets as editable Blender, URDF, and USD representations, then optimizes scene assembly in Isaac Sim so physics feedback and semantic scoring can refine object assets, articulations, support relations, and scene consistency.
+      </p>
+      <figure class="figure-panel wide">
+        <img src="asset/figure/method.png" alt="Overview of the PRISM pipeline from scene parsing to object-level loop and scene-level loop.">
+      </figure>
+      <div class="step-grid">
+        <article>
+          <span>Step 1</span>
+          <h3>Scene parsing</h3>
+          <p>An MLLM reasoner predicts scene hierarchy, 2D and 3D boxes, support relations, and occlusion cues from the input image.</p>
+        </article>
+        <article>
+          <span>Step 2</span>
+          <h3>Procedural asset programming</h3>
+          <p>An MLLM programmer generates Blender geometry scripts, articulation code, and URDF export logic for each foreground object.</p>
+        </article>
+        <article>
+          <span>Step 3</span>
+          <h3>Object-level physics loop</h3>
+          <p>Free-fall and force-perturbation rollouts expose mass, collision, joint-axis, joint-range, and articulation errors for localized code edits.</p>
+        </article>
+        <article>
+          <span>Step 4</span>
+          <h3>Scene-level CEM refinement</h3>
+          <p>Cross-Entropy Method optimization adjusts planar translation, yaw, and scale using simulation rewards and MLLM semantic scoring.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="benchmark" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Dataset and Benchmark</p>
+        <h2>A multi-object simulation benchmark for physically executable scenes.</h2>
+      </div>
+      <div class="benchmark-layout">
+        <div class="benchmark-copy">
+          <p>
+            PRISM is evaluated on PartNet-Mobility and a newly constructed synthetic scene benchmark designed to stress-test monocular reconstruction in physically realistic multi-object environments. The benchmark tasks cover placement, assembly, articulation, and interaction with task-relevant affordances.
+          </p>
+          <p>
+            Across 84 downstream manipulation tasks, PRISM achieves a 92.85% task success rate.
+          </p>
+          <div class="benchmark-stats">
+            <div>
+              <strong>100</strong>
+              <span>object categories</span>
+            </div>
+            <div>
+              <strong>80</strong>
+              <span>articulated categories</span>
+            </div>
+            <div>
+              <strong>30</strong>
+              <span>USD-format scenes</span>
+            </div>
+            <div>
+              <strong>84</strong>
+              <span>downstream tasks</span>
+            </div>
+          </div>
+        </div>
+        <figure class="figure-panel">
+          <img src="asset/figure/task.png" alt="Examples of PRISM benchmark scenes with their corresponding manipulation tasks.">
+        </figure>
+      </div>
+    </section>
+
+    <section id="results" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Results</p>
+        <h2>Closed-loop programming improves reconstruction, articulation, and downstream interaction.</h2>
+      </div>
+      <div class="result-gallery">
+        <figure class="figure-panel result-qualitative">
+          <img src="asset/figure/object.jpeg" alt="Object-level qualitative and quantitative comparison results.">
+        </figure>
+        <figure class="figure-panel">
+          <img src="asset/figure/scene.jpeg" alt="Scene-level qualitative comparison results.">
+        </figure>
+      </div>
+
+      <div class="table-grid">
+        <section class="data-table appearance-table" aria-labelledby="appearance-table-title">
+          <h3 id="appearance-table-title">Object-Level Appearance and Geometry</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th rowspan="2">Method</th>
+                  <th colspan="5">Appearance Evaluation (Image)</th>
+                  <th>Similarity</th>
+                  <th colspan="4">Geometry Evaluation</th>
+                </tr>
+                <tr>
+                  <th>SSIM↑</th>
+                  <th>LPIPS↓</th>
+                  <th>FID↓</th>
+                  <th>KID×100↓</th>
+                  <th>CLIP↑</th>
+                  <th>Uni3D↑</th>
+                  <th>CD×10↓</th>
+                  <th>F@0.01↑</th>
+                  <th>F@0.05↑</th>
+                  <th>F@0.1↑</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Articulate-Anything</td>
+                  <td>0.7646</td>
+                  <td>0.2930</td>
+                  <td>142.46</td>
+                  <td>2.3116</td>
+                  <td>0.7056</td>
+                  <td>0.2218</td>
+                  <td>0.2588</td>
+                  <td>12.94</td>
+                  <td>49.14</td>
+                  <td>70.69</td>
+                </tr>
+                <tr>
+                  <td>PhysX-Anything</td>
+                  <td>0.7657</td>
+                  <td>0.2991</td>
+                  <td>93.42</td>
+                  <td>0.4032</td>
+                  <td>0.7937</td>
+                  <td>0.1921</td>
+                  <td>0.3744</td>
+                  <td>10.14</td>
+                  <td>41.16</td>
+                  <td>62.65</td>
+                </tr>
+                <tr class="highlight-row">
+                  <td>PRISM</td>
+                  <td>0.8398</td>
+                  <td>0.1864</td>
+                  <td>72.59</td>
+                  <td>0.2878</td>
+                  <td>0.8125</td>
+                  <td>0.3522</td>
+                  <td>0.2065</td>
+                  <td>25.77</td>
+                  <td>58.31</td>
+                  <td>75.47</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="data-table articulation-table" aria-labelledby="articulation-table-title">
+          <h3 id="articulation-table-title">Articulation and Kinematics</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Total</th>
+                  <th>#Pred</th>
+                  <th>#Hit</th>
+                  <th>Miss↓</th>
+                  <th>Axis↓</th>
+                  <th>Pivot↓</th>
+                  <th>Type↓</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Articulate-Anything</td>
+                  <td>256</td>
+                  <td>175</td>
+                  <td>153</td>
+                  <td>40%</td>
+                  <td>47.70</td>
+                  <td>1.54</td>
+                  <td>23.62%</td>
+                </tr>
+                <tr>
+                  <td>PhysX-Anything</td>
+                  <td>256</td>
+                  <td>188</td>
+                  <td>136</td>
+                  <td>47%</td>
+                  <td>26.91</td>
+                  <td>1.49</td>
+                  <td>26.17%</td>
+                </tr>
+                <tr class="highlight-row">
+                  <td>PRISM</td>
+                  <td>256</td>
+                  <td>305</td>
+                  <td>238</td>
+                  <td>7%</td>
+                  <td>16.50</td>
+                  <td>1.09</td>
+                  <td>5.63%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="bibtex" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Citation</p>
+        <h2>BibTeX</h2>
+      </div>
+      <pre class="bibtex"><code>@misc{he2026prism,
+  title  = {PRISM: Programming Interactive Scenes from Monocular Images for Embodied Simulation},
+  author = {He, Yumeng and Song, Yichen and Yang, Xiaotian and Zhang, Weijia and Zhou, Zanwei and Gong, Junru and Yang, Xiaokang and Wang, Yunbo},
+  year   = {2026},
+  note   = {Project page}
+}</code></pre>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>PRISM project page. Built as a self-contained static website.</p>
+  </footer>
+
+  <script src="static/js/main.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./static/vendor/three/three.module.js",
+        "three/addons/": "./static/vendor/three/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="static/js/demo-viewer.js"></script>
+</body>
+</html>
