@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<robot name="rotating_tier_trolley">
+  <!-- Generated for Isaac Sim. Units: meters. Coordinate system: Z-up, right-handed. -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/base_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/base_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+  <link name="tray_01_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.35"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/tray_01_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/tray_01_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+  <link name="tray_02_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.35"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/tray_02_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/tray_02_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+  <link name="tray_03_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.35"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/tray_03_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/tray_03_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+  <link name="tray_04_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.35"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/tray_04_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/tray_04_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+  <link name="tray_05_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.35"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/tray_05_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/tray_05_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+  <link name="caster_01_bracket_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.04"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_01_bracket_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_01_bracket_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+  <link name="caster_01_wheel_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.03"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_01_wheel_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_01_wheel_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+  <link name="caster_02_bracket_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.04"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_02_bracket_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_02_bracket_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+  <link name="caster_02_wheel_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.03"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_02_wheel_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_02_wheel_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+  <link name="caster_03_bracket_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.04"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_03_bracket_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_03_bracket_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+  <link name="caster_03_wheel_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.03"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_03_wheel_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_03_wheel_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+  <link name="caster_04_bracket_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.04"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_04_bracket_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_04_bracket_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+  <link name="caster_04_wheel_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.03"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_04_wheel_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/caster_04_wheel_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+  <joint name="tray_01_yaw_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="tray_01_link"/>
+    <origin xyz="0 0 0.14" rpy="0 0 0.13962634"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+  <joint name="tray_02_yaw_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="tray_02_link"/>
+    <origin xyz="0 0 0.375" rpy="0 0 -1.08210414"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+  <joint name="tray_03_yaw_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="tray_03_link"/>
+    <origin xyz="0 0 0.61" rpy="0 0 0.942477796"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+  <joint name="tray_04_yaw_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="tray_04_link"/>
+    <origin xyz="0 0 0.845" rpy="0 0 -0.593411946"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+  <joint name="tray_05_yaw_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="tray_05_link"/>
+    <origin xyz="0 0 1.08" rpy="0 0 0.314159265"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+  <joint name="caster_01_swivel_joint" type="continuous">
+    <parent link="tray_01_link"/>
+    <child link="caster_01_bracket_link"/>
+    <origin xyz="-0.2 -0.21 -0.035" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+  <joint name="caster_01_wheel_roll_joint" type="continuous">
+    <parent link="caster_01_bracket_link"/>
+    <child link="caster_01_wheel_link"/>
+    <origin xyz="0 0 -0.083" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+  <joint name="caster_02_swivel_joint" type="continuous">
+    <parent link="tray_01_link"/>
+    <child link="caster_02_bracket_link"/>
+    <origin xyz="0.66 -0.21 -0.035" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+  <joint name="caster_02_wheel_roll_joint" type="continuous">
+    <parent link="caster_02_bracket_link"/>
+    <child link="caster_02_wheel_link"/>
+    <origin xyz="0 0 -0.083" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+  <joint name="caster_03_swivel_joint" type="continuous">
+    <parent link="tray_01_link"/>
+    <child link="caster_03_bracket_link"/>
+    <origin xyz="0.66 0.21 -0.035" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+  <joint name="caster_03_wheel_roll_joint" type="continuous">
+    <parent link="caster_03_bracket_link"/>
+    <child link="caster_03_wheel_link"/>
+    <origin xyz="0 0 -0.083" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+  <joint name="caster_04_swivel_joint" type="continuous">
+    <parent link="tray_01_link"/>
+    <child link="caster_04_bracket_link"/>
+    <origin xyz="-0.2 0.21 -0.035" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+  <joint name="caster_04_wheel_roll_joint" type="continuous">
+    <parent link="caster_04_bracket_link"/>
+    <child link="caster_04_wheel_link"/>
+    <origin xyz="0 0 -0.083" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <dynamics damping="0.05" friction="0.0"/>
+  </joint>
+</robot>

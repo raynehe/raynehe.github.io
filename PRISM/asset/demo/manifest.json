@@ -1,0 +1,12 @@
+{
+  "cases": [
+    {
+      "id": "bedside_table012",
+      "title": "Bedside Table 012",
+      "thumbnail": "asset/demo/bedside_table012/Res1_3D.png",
+      "source": "urdf-obj",
+      "urdf": "asset/demo/bedside_table012/object.urdf",
+      "meshBasePath": "asset/demo/bedside_table012/"
+    }
+  ]
+}
