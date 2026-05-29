@@ -349,7 +349,7 @@ h1 {
 
 .demo-shell {
   display: grid;
-  grid-template-columns: minmax(12rem, 16rem) minmax(0, 1fr);
+  grid-template-columns: minmax(10rem, 12rem) minmax(0, 1fr);
   gap: 1rem;
   align-items: stretch;
 }
@@ -359,7 +359,7 @@ h1 {
   flex-direction: column;
   gap: 0.6rem;
   min-width: 0;
-  max-height: calc(5 * 4.4rem + 4 * 0.6rem);
+  max-height: calc(5 * 10rem + 4 * 0.6rem);
   overflow-y: auto;
   padding-right: 0.2rem;
 }
@@ -381,12 +381,12 @@ h1 {
 }
 
 .demo-case-button {
-  display: grid;
-  grid-template-columns: 4.4rem minmax(0, 1fr);
-  align-items: center;
+  position: relative;
+  display: block;
   flex: 0 0 auto;
   width: 100%;
-  height: 4.4rem;
+  aspect-ratio: 1;
+  min-height: 10rem;
   min-width: 0;
   padding: 0;
   overflow: hidden;
@@ -413,14 +413,14 @@ h1 {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .demo-case-thumb {
   display: grid;
   place-items: center;
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   background: #ffffff;
 }
@@ -432,17 +432,27 @@ h1 {
 }
 
 .demo-case-title {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  position: absolute;
+  inset: auto 0 0;
+  display: block;
   min-width: 0;
-  padding: 0.75rem;
+  padding: 1.75rem 0.75rem 0.75rem;
   color: var(--text);
   font-size: 0.92rem;
   font-weight: 750;
   line-height: 1.25;
+  background: linear-gradient(180deg, transparent, rgba(5, 7, 13, 0.88) 54%, rgba(5, 7, 13, 0.96));
   overflow: hidden;
   overflow-wrap: anywhere;
+  opacity: 0;
+  transform: translateY(0.35rem);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.demo-case-button:hover .demo-case-title,
+.demo-case-button:focus-visible .demo-case-title {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .demo-viewer-panel {
@@ -832,8 +842,16 @@ th {
   }
 
   .demo-case-list {
-    overflow-y: auto;
+    flex-direction: row;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
     padding-bottom: 0.15rem;
+  }
+
+  .demo-case-button {
+    width: min(12rem, 46vw);
+    min-height: 9rem;
   }
 
   .demo-joint-panel {

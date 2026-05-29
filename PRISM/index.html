@@ -3,18 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PRISM programs interactive simulation-ready scenes from monocular images through MLLM-driven code synthesis and physics-in-the-loop refinement.">
-  <meta name="keywords" content="PRISM, embodied simulation, real-to-sim, monocular reconstruction, articulated objects, MLLM, physics-in-the-loop">
-  <meta property="og:title" content="PRISM: Programming Interactive Scenes from Monocular Images for Embodied Simulation">
-  <meta property="og:description" content="A project page for PRISM, a framework for simulation-ready interactive scene generation from a single RGB image.">
+  <meta name="description" content="NeoWorld-Pro programs interactive simulation-ready scenes from monocular images through MLLM-driven code synthesis and physics-in-the-loop refinement.">
+  <meta name="keywords" content="NeoWorld-Pro, embodied simulation, real-to-sim, monocular reconstruction, articulated objects, MLLM, physics-in-the-loop">
+  <meta property="og:title" content="NeoWorld-Pro: Programming Interactive Scenes from Monocular Images for Embodied Simulation">
+  <meta property="og:description" content="Project page for NeoWorld-Pro, a framework for simulation-ready interactive scene generation from a single RGB image.">
   <meta property="og:image" content="static/images/figure-1-demonstration.png">
   <meta name="twitter:card" content="summary_large_image">
-  <title>PRISM: Programming Interactive Scenes from Monocular Images</title>
+  <title>NeoWorld-Pro: Programming Interactive Scenes from Monocular Images</title>
   <link rel="stylesheet" href="static/css/style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./static/vendor/three/three.module.js",
+        "three/addons/": "./static/vendor/three/examples/jsm/"
+      }
+    }
+  </script>
+  <link rel="modulepreload" href="static/js/demo-viewer.js">
+  <link rel="modulepreload" href="static/vendor/three/three.module.js">
+  <link rel="modulepreload" href="static/vendor/three/three.core.js">
+  <link rel="modulepreload" href="static/vendor/three/examples/jsm/loaders/OBJLoader.js">
 </head>
 <body>
   <header class="site-nav" aria-label="Primary navigation">
-    <a class="brand" href="#top" aria-label="PRISM home">PRISM</a>
+    <a class="brand" href="#top" aria-label="NeoWorld-Pro home">NeoWorld-Pro</a>
     <nav class="nav-links">
       <a href="#teaser-video">Video</a>
       <a href="#demo-visualization">Demo</a>
@@ -32,7 +44,6 @@
       <div class="hero-inner">
         <p class="eyebrow">Monocular Real-to-Sim Scene Programming</p>
         <h1 id="paper-title">
-          <span class="title-part">PRISM:</span>
           <span class="title-part">Programming</span>
           <span class="title-part">Interactive</span>
           <span class="title-part">Scenes</span>
@@ -42,7 +53,7 @@
           <span class="title-part">Simulation</span>
         </h1>
         <p class="subtitle">
-          PRISM transforms a single RGB image into executable, simulation-ready interactive scenes with programmable geometry, articulation, physical properties, and scene layout.
+          NeoWorld-Pro transforms a single RGB image into executable, simulation-ready interactive scenes with programmable geometry, articulation, physical properties, and scene layout.
         </p>
         <p class="authors">
           Yumeng He, Yichen Song, Xiaotian Yang, Weijia Zhang, Zanwei Zhou, Junru Gong, Xiaokang Yang, Yunbo Wang
@@ -50,7 +61,7 @@
         <p class="affiliation">Shanghai Jiao Tong University</p>
         <div class="button-row" aria-label="Project links">
           <a class="button button-primary placeholder-link" href="#" aria-disabled="true">Paper <span>Coming soon</span></a>
-          <a class="button placeholder-link" href="#" aria-disabled="true">Code <span>Coming soon</span></a>
+          <a class="button" href="https://github.com/raynehe/NeoWorld-Pro">Code <span>GitHub</span></a>
           <a class="button placeholder-link" href="#" aria-disabled="true">Dataset <span>Coming soon</span></a>
         </div>
       </div>
@@ -62,10 +73,10 @@
       </div>
       <div class="teaser-summary">
         <p>
-          The advancement of Embodied AI requires high-quality simulation assets that faithfully mirror the physical world. PRISM reformulates monocular scene reconstruction as a procedural programming task for interactive 3D environments. It leverages multimodal large language models to translate a single RGB image into executable programs defining object geometry, articulation, physical properties, and scene layout.
+          The advancement of Embodied AI requires high-quality simulation assets that faithfully mirror the physical world. NeoWorld-Pro reformulates monocular scene reconstruction as a procedural programming task for interactive 3D environments. It leverages multimodal large language models to translate a single RGB image into executable programs defining object geometry, articulation, physical properties, and scene layout.
         </p>
         <p>
-          To ensure simulation readiness, PRISM introduces a physics-in-the-loop mechanism that executes generated programs in a physics engine and iteratively refines them using simulation feedback. The resulting scenes support stable stacking, fine-grained manipulation, and articulated object interactions that are difficult for open-loop reconstruction pipelines.
+          To ensure simulation readiness, NeoWorld-Pro introduces a physics-in-the-loop mechanism that executes generated programs in a physics engine and iteratively refines them using simulation feedback. The resulting scenes support stable stacking, fine-grained manipulation, and articulated object interactions that are difficult for open-loop reconstruction pipelines.
         </p>
       </div>
       <figure class="video-panel">
@@ -116,10 +127,10 @@
         <h2>A two-level closed loop for object validity and scene consistency.</h2>
       </div>
       <p class="method-intro">
-        PRISM targets scene-level interactive simulation rather than static reconstruction. It first programs object assets as editable Blender, URDF, and USD representations, then optimizes scene assembly in Isaac Sim so physics feedback and semantic scoring can refine object assets, articulations, support relations, and scene consistency.
+        NeoWorld-Pro targets scene-level interactive simulation rather than static reconstruction. It first programs object assets as editable Blender, URDF, and USD representations, then optimizes scene assembly in Isaac Sim so physics feedback and semantic scoring can refine object assets, articulations, support relations, and scene consistency.
       </p>
       <figure class="figure-panel wide">
-        <img src="asset/figure/method.png" alt="Overview of the PRISM pipeline from scene parsing to object-level loop and scene-level loop.">
+        <img src="asset/figure/method.png" alt="Overview of the NeoWorld-Pro pipeline from scene parsing to object-level loop and scene-level loop." loading="lazy" decoding="async">
       </figure>
       <div class="step-grid">
         <article>
@@ -153,10 +164,10 @@
       <div class="benchmark-layout">
         <div class="benchmark-copy">
           <p>
-            PRISM is evaluated on PartNet-Mobility and a newly constructed synthetic scene benchmark designed to stress-test monocular reconstruction in physically realistic multi-object environments. The benchmark tasks cover placement, assembly, articulation, and interaction with task-relevant affordances.
+            NeoWorld-Pro is evaluated on PartNet-Mobility and a newly constructed synthetic scene benchmark designed to stress-test monocular reconstruction in physically realistic multi-object environments. The benchmark tasks cover placement, assembly, articulation, and interaction with task-relevant affordances.
           </p>
           <p>
-            Across 84 downstream manipulation tasks, PRISM achieves a 92.85% task success rate.
+            Across 84 downstream manipulation tasks, NeoWorld-Pro achieves a 92.85% task success rate.
           </p>
           <div class="benchmark-stats">
             <div>
@@ -178,7 +189,7 @@
           </div>
         </div>
         <figure class="figure-panel">
-          <img src="asset/figure/task.png" alt="Examples of PRISM benchmark scenes with their corresponding manipulation tasks.">
+          <img src="asset/figure/task.png" alt="Examples of NeoWorld-Pro benchmark scenes with their corresponding manipulation tasks." loading="lazy" decoding="async">
         </figure>
       </div>
     </section>
@@ -190,10 +201,10 @@
       </div>
       <div class="result-gallery">
         <figure class="figure-panel result-qualitative">
-          <img src="asset/figure/object.jpeg" alt="Object-level qualitative and quantitative comparison results.">
+          <img src="asset/figure/object.jpeg" alt="Object-level qualitative and quantitative comparison results." loading="lazy" decoding="async">
         </figure>
         <figure class="figure-panel">
-          <img src="asset/figure/scene.jpeg" alt="Scene-level qualitative comparison results.">
+          <img src="asset/figure/scene.jpeg" alt="Scene-level qualitative comparison results." loading="lazy" decoding="async">
         </figure>
       </div>
 
@@ -250,7 +261,7 @@
                   <td>62.65</td>
                 </tr>
                 <tr class="highlight-row">
-                  <td>PRISM</td>
+                  <td>NeoWorld-Pro</td>
                   <td>0.8398</td>
                   <td>0.1864</td>
                   <td>72.59</td>
@@ -305,7 +316,7 @@
                   <td>26.17%</td>
                 </tr>
                 <tr class="highlight-row">
-                  <td>PRISM</td>
+                  <td>NeoWorld-Pro</td>
                   <td>256</td>
                   <td>305</td>
                   <td>238</td>
@@ -326,8 +337,8 @@
         <p class="eyebrow">Citation</p>
         <h2>BibTeX</h2>
       </div>
-      <pre class="bibtex"><code>@misc{he2026prism,
-  title  = {PRISM: Programming Interactive Scenes from Monocular Images for Embodied Simulation},
+      <pre class="bibtex"><code>@misc{he2026NeoWorld-Pro,
+  title  = {NeoWorld-Pro: Programming Interactive Scenes from Monocular Images for Embodied Simulation},
   author = {He, Yumeng and Song, Yichen and Yang, Xiaotian and Zhang, Weijia and Zhou, Zanwei and Gong, Junru and Yang, Xiaokang and Wang, Yunbo},
   year   = {2026},
   note   = {Project page}
@@ -336,16 +347,28 @@
   </main>
 
   <footer class="footer">
-    <p>PRISM project page. Built as a self-contained static website.</p>
+    <p>NeoWorld-Pro project page. Built as a self-contained static website.</p>
   </footer>
 
   <script src="static/js/main.js"></script>
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "./static/vendor/three/three.module.js",
-        "three/addons/": "./static/vendor/three/examples/jsm/"
-      }
+  <script>
+    if (window.location.protocol === "file:") {
+      const message = "Open this page through a local HTTP server to load demos.";
+      document.querySelectorAll("[data-demo-list]").forEach((element) => {
+        element.replaceChildren();
+        const notice = document.createElement("div");
+        notice.className = "demo-loading";
+        notice.textContent = message;
+        element.append(notice);
+      });
+      const title = document.querySelector("[data-demo-title]");
+      const meta = document.querySelector("[data-demo-meta]");
+      const status = document.querySelector("[data-demo-status]");
+      const stageLabel = document.querySelector(".demo-stage-placeholder span");
+      if (title) title.textContent = "Local server required";
+      if (meta) meta.textContent = "The browser blocks demo module and asset loading from file paths.";
+      if (status) status.textContent = message;
+      if (stageLabel) stageLabel.textContent = "Waiting for HTTP preview...";
     }
   </script>
   <script type="module" src="static/js/demo-viewer.js"></script>

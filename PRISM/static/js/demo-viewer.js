@@ -3,6 +3,7 @@ import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 
 const MANIFEST_URL = "asset/demo/manifest.json";
 const ACTIVE_JOINT_TYPES = new Set(["continuous", "revolute", "prismatic"]);
+const textFetchCache = new Map();
 
 class DemoViewer {
   constructor(root) {
@@ -29,7 +30,7 @@ class DemoViewer {
 
     try {
       this.setStatus("Loading demo manifest...");
-      const response = await fetch(MANIFEST_URL, { cache: "no-store" });
+      const response = await fetch(MANIFEST_URL);
       if (!response.ok) {
         throw new Error(`Could not load ${MANIFEST_URL}.`);
       }
@@ -185,6 +186,7 @@ function renderCaseThumbnail(container, demoCase) {
   image.src = demoCase.thumbnail;
   image.alt = demoCase.title;
   image.loading = "lazy";
+  image.decoding = "async";
   image.addEventListener("error", () => renderCaseThumbnailFallback(container, demoCase.title), { once: true });
   container.replaceChildren(image);
 }
@@ -225,7 +227,7 @@ async function loadUrdfObjScene(demoCase) {
   const urdfText = await fetchText(demoCase.urdf);
   const urdf = parseUrdfText(urdfText);
   const meshBaseUrl = new URL(demoCase.meshBasePath ?? "./", window.location.href);
-  const objectVisuals = [];
+  const visualJobs = [];
 
   for (const link of urdf.links.values()) {
     for (const visual of link.visuals) {
@@ -233,22 +235,25 @@ async function loadUrdfObjScene(demoCase) {
         continue;
       }
 
-      const object = await loadObjVisual({
+      visualJobs.push({
         visual,
         linkName: link.name,
         meshBaseUrl,
-        visualIndex: objectVisuals.length,
-      });
-
-      objectVisuals.push({
-        linkName: link.name,
-        name: visual.name || visual.filename,
-        origin: visual.origin,
-        scale: visual.scale,
-        object,
+        visualIndex: visualJobs.length,
       });
     }
   }
+
+  const objectVisuals = await Promise.all(visualJobs.map(async (job) => {
+    const object = await loadObjVisual(job);
+    return {
+      linkName: job.linkName,
+      name: job.visual.name || job.visual.filename,
+      origin: job.visual.origin,
+      scale: job.visual.scale,
+      object,
+    };
+  }));
 
   if (!objectVisuals.length) {
     throw new Error("No visual OBJ meshes were found in the URDF.");
@@ -1065,11 +1070,26 @@ function fallbackColor(index) {
 }
 
 async function fetchText(url) {
-  const response = await fetch(url, { cache: "no-store" });
-  if (!response.ok) {
-    throw new Error(`Could not load ${url}.`);
+  const requestUrl = new URL(url, window.location.href).href;
+  if (textFetchCache.has(requestUrl)) {
+    return textFetchCache.get(requestUrl);
   }
-  return response.text();
+
+  const fetchPromise = fetch(requestUrl).then((response) => {
+    if (!response.ok) {
+      throw new Error(`Could not load ${url}.`);
+    }
+    return response.text();
+  });
+
+  textFetchCache.set(requestUrl, fetchPromise);
+
+  try {
+    return await fetchPromise;
+  } catch (error) {
+    textFetchCache.delete(requestUrl);
+    throw error;
+  }
 }
 
 function yieldToBrowser() {
