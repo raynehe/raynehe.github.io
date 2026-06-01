@@ -122,9 +122,7 @@ class DemoViewer {
     });
 
     this.cleanupScene = sceneRuntime.cleanup;
-    const meshCount = parsedScene.meshCount ?? parsedScene.usd.meshes.length;
-    const jointCount = parsedScene.urdf.joints.filter((joint) => ACTIVE_JOINT_TYPES.has(joint.type)).length;
-    this.setTitle(demoCase.title, `${meshCount} meshes, ${jointCount} controllable joints.`);
+    this.setTitle(demoCase.title, "");
     this.setStatus("Scene ready. Drag to rotate and scroll to zoom.");
   }
 
@@ -147,6 +145,7 @@ class DemoViewer {
     }
     if (this.metaElement) {
       this.metaElement.textContent = meta;
+      this.metaElement.hidden = !meta;
     }
   }
 
@@ -373,7 +372,6 @@ function createThreeRuntime({ stageElement, jointPanelElement, parsedScene, setS
         value: defaultJointValue(joint),
       };
       jointRuntimes.set(joint.name, runtime);
-      addJointMarker(originGroup, runtime.axis, joint.type);
       applyJointRuntime(runtime, runtime.value);
     }
   }
@@ -553,17 +551,14 @@ function renderJointPanel(panelElement, jointControls) {
   for (const control of jointControls) {
     const { joint, onChange } = control;
     const limits = sliderLimits(joint);
+    const jointLabel = compactName(joint.name);
     const wrapper = document.createElement("div");
     wrapper.className = "demo-joint-control";
 
     const label = document.createElement("label");
     const name = document.createElement("span");
     name.className = "demo-joint-name";
-    name.textContent = compactName(joint.name);
-
-    const valueLabel = document.createElement("span");
-    valueLabel.className = "demo-joint-value";
-    valueLabel.textContent = formatJointValue(joint, control.value);
+    name.textContent = jointLabel;
 
     const input = document.createElement("input");
     input.type = "range";
@@ -571,33 +566,17 @@ function renderJointPanel(panelElement, jointControls) {
     input.max = String(limits.max);
     input.step = String(limits.step);
     input.value = String(control.value);
+    input.setAttribute("aria-label", jointLabel);
 
     input.addEventListener("input", () => {
       const value = Number(input.value);
-      valueLabel.textContent = formatJointValue(joint, value);
       onChange(joint.name, value);
     });
 
-    label.append(name, valueLabel);
+    label.append(name);
     wrapper.append(label, input);
     panelElement.append(wrapper);
   }
-}
-
-function addJointMarker(originGroup, axis, type) {
-  const color = type === "prismatic" ? 0xe6bf6a : 0x58d7ef;
-  const marker = new THREE.Group();
-  const sphere = new THREE.Mesh(
-    new THREE.SphereGeometry(0.025, 14, 10),
-    new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.25, roughness: 0.35 }),
-  );
-  const lineGeometry = new THREE.BufferGeometry().setFromPoints([
-    axis.clone().multiplyScalar(-0.12),
-    axis.clone().multiplyScalar(0.12),
-  ]);
-  const line = new THREE.Line(lineGeometry, new THREE.LineBasicMaterial({ color }));
-  marker.add(sphere, line);
-  originGroup.add(marker);
 }
 
 function applyJointRuntime(runtime, value) {
@@ -633,13 +612,6 @@ function sliderLimits(joint) {
   }
 
   return { min: -180, max: 180, step: 1 };
-}
-
-function formatJointValue(joint, value) {
-  if (joint.type === "prismatic") {
-    return `${Number(value).toFixed(2)} m`;
-  }
-  return `${Math.round(Number(value))} deg`;
 }
 
 function compactName(value) {

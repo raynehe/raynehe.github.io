@@ -310,6 +310,28 @@ h1 {
   background: #000000;
 }
 
+.realworld-video-panel {
+  width: min(100%, 520px);
+  justify-self: end;
+  margin: 0;
+}
+
+.realworld-video-panel video {
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+}
+
+.realworld-video-caption {
+  padding: 0.75rem 1rem 0.9rem;
+  color: var(--soft);
+  background: #000000;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.35;
+  text-align: center;
+}
+
 #teaser-video .section-heading {
   width: min(100%, 980px);
   max-width: none;
@@ -348,8 +370,17 @@ h1 {
 }
 
 .demo-shell {
+  --demo-card-size: 12rem;
+  --demo-card-half-size: 6rem;
+  --demo-card-gap: 0.6rem;
+  --demo-list-visible-height: calc(
+    var(--demo-card-size) + var(--demo-card-gap) +
+    var(--demo-card-size) + var(--demo-card-gap) +
+    var(--demo-card-size) + var(--demo-card-gap) +
+    var(--demo-card-half-size)
+  );
   display: grid;
-  grid-template-columns: minmax(10rem, 12rem) minmax(0, 1fr);
+  grid-template-columns: minmax(10rem, var(--demo-card-size)) minmax(0, 1fr);
   gap: 1rem;
   align-items: stretch;
 }
@@ -357,11 +388,18 @@ h1 {
 .demo-case-list {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: var(--demo-card-gap);
   min-width: 0;
-  max-height: calc(5 * 10rem + 4 * 0.6rem);
+  max-height: var(--demo-list-visible-height);
   overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 0.2rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.demo-case-list::-webkit-scrollbar {
+  display: none;
 }
 
 .demo-loading,
@@ -385,8 +423,9 @@ h1 {
   display: block;
   flex: 0 0 auto;
   width: 100%;
+  height: var(--demo-card-size);
   aspect-ratio: 1;
-  min-height: 10rem;
+  min-height: 0;
   min-width: 0;
   padding: 0;
   overflow: hidden;
@@ -594,12 +633,6 @@ h1 {
   overflow-wrap: anywhere;
 }
 
-.demo-joint-value {
-  flex: 0 0 auto;
-  color: var(--mint);
-  font-variant-numeric: tabular-nums;
-}
-
 .demo-joint-control input[type="range"] {
   width: 100%;
   margin-top: 0.65rem;
@@ -672,16 +705,74 @@ h1 {
   grid-template-columns: 1fr;
   gap: 1.2rem;
   align-items: start;
+  width: min(100%, 1020px);
+  margin-inline: auto;
 }
 
 .result-gallery .figure-panel {
-  width: min(100%, 1020px);
+  width: 100%;
   background: #ffffff;
   margin-inline: auto;
 }
 
 .result-gallery img {
   background: #ffffff;
+}
+
+.scene-reconstruction-figure,
+.scene-reconstruction-figure img {
+  background: #000000;
+}
+
+.scene-reconstruction-figure {
+  max-width: 760px;
+}
+
+.scene-reconstruction-caption {
+  padding: 0.85rem 1rem 1rem;
+  color: var(--soft);
+  background: #000000;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.real-captured-reconstruction-panel {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #000000;
+  box-shadow: var(--shadow);
+}
+
+.real-captured-media-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(14rem, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+  padding: 1rem;
+}
+
+.real-captured-media-row img,
+.real-captured-media-row video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000000;
+  border-radius: 6px;
+}
+
+.real-captured-media-row img {
+  aspect-ratio: 3177 / 2087;
+}
+
+.real-captured-media-row video {
+  aspect-ratio: 3 / 4;
 }
 
 .table-grid {
@@ -841,23 +932,41 @@ th {
     grid-template-columns: 1fr;
   }
 
+  .demo-shell {
+    --demo-card-size: min(12rem, 46vw);
+    --demo-card-half-size: min(6rem, 23vw);
+  }
+
   .demo-case-list {
-    flex-direction: row;
-    max-height: none;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-bottom: 0.15rem;
+    flex-direction: column;
+    max-height: var(--demo-list-visible-height);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 0;
   }
 
   .demo-case-button {
-    width: min(12rem, 46vw);
-    min-height: 9rem;
+    width: var(--demo-card-size);
+    min-height: 0;
   }
 
   .demo-joint-panel {
     max-height: 20rem;
     border-top: 1px solid var(--line);
     border-left: 0;
+  }
+
+  .real-captured-media-row {
+    grid-template-columns: 1fr;
+  }
+
+  .real-captured-media-row video {
+    width: min(100%, 24rem);
+    justify-self: center;
+  }
+
+  .realworld-video-panel {
+    justify-self: center;
   }
 
   .step-grid {

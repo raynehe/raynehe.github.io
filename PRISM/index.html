@@ -30,7 +30,9 @@
     <nav class="nav-links">
       <a href="#teaser-video">Video</a>
       <a href="#demo-visualization">Demo</a>
+      <!--
       <a href="#method">Method</a>
+      -->
       <a href="#benchmark">Benchmark</a>
       <a href="#results">Results</a>
       <a href="#bibtex">BibTeX</a>
@@ -79,18 +81,13 @@
           To ensure simulation readiness, NeoWorld-Pro introduces a physics-in-the-loop mechanism that executes generated programs in a physics engine and iteratively refines them using simulation feedback. The resulting scenes support stable stacking, fine-grained manipulation, and articulated object interactions that are difficult for open-loop reconstruction pipelines.
         </p>
       </div>
-      <figure class="video-panel">
-        <video controls muted playsinline preload="metadata">
-          <source src="asset/figure/teaser_video.mp4" type="video/mp4">
-        </video>
-      </figure>
     </section>
 
     <section id="demo-visualization" class="section reveal">
       <div class="section-heading">
         <p class="eyebrow">Interactive Demo</p>
         <h2>Inspect generated assets and actuate their articulated parts in the browser.</h2>
-        <blockquote class="demo-note">We are actively adding more demos to this viewer.</blockquote>
+        <blockquote class="demo-note">We are actively adding more demos.</blockquote>
       </div>
       <div class="demo-shell" data-demo-viewer>
         <aside class="demo-case-list" data-demo-list aria-label="Demo cases">
@@ -121,6 +118,7 @@
       </div>
     </section>
 
+    <!--
     <section id="method" class="section reveal">
       <div class="section-heading">
         <p class="eyebrow">Method</p>
@@ -129,9 +127,6 @@
       <p class="method-intro">
         NeoWorld-Pro targets scene-level interactive simulation rather than static reconstruction. It first programs object assets as editable Blender, URDF, and USD representations, then optimizes scene assembly in Isaac Sim so physics feedback and semantic scoring can refine object assets, articulations, support relations, and scene consistency.
       </p>
-      <figure class="figure-panel wide">
-        <img src="asset/figure/method.png" alt="Overview of the NeoWorld-Pro pipeline from scene parsing to object-level loop and scene-level loop." loading="lazy" decoding="async">
-      </figure>
       <div class="step-grid">
         <article>
           <span>Step 1</span>
@@ -155,6 +150,7 @@
         </article>
       </div>
     </section>
+    -->
 
     <section id="benchmark" class="section reveal">
       <div class="section-heading">
@@ -200,11 +196,20 @@
         <h2>Closed-loop programming improves reconstruction, articulation, and downstream interaction.</h2>
       </div>
       <div class="result-gallery">
-        <figure class="figure-panel result-qualitative">
-          <img src="asset/figure/object.jpeg" alt="Object-level qualitative and quantitative comparison results." loading="lazy" decoding="async">
+        <figure class="figure-panel scene-reconstruction-figure">
+          <img src="asset/figure/scene-level-reconstruction.png" alt="Scene-level reconstruction comparison showing input and ours results." loading="lazy" decoding="async">
+          <figcaption class="scene-reconstruction-caption">Scene-level reconstruction (Input / Ours)</figcaption>
         </figure>
-        <figure class="figure-panel">
-          <img src="asset/figure/scene.jpeg" alt="Scene-level qualitative comparison results." loading="lazy" decoding="async">
+        <figure class="real-captured-reconstruction-panel">
+          <div class="real-captured-media-row">
+            <img src="asset/figure/real-captured-reconstruction.png" alt="Real-captured reconstruction comparison showing input and ours results." loading="lazy" decoding="async">
+            <video controls muted loop playsinline preload="metadata">
+              <source src="asset/figure/scene_video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <figcaption class="realworld-video-caption">
+            Real-captured reconstruction (Input / Ours)
+          </figcaption>
         </figure>
       </div>
 

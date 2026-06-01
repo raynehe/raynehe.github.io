@@ -7,6 +7,38 @@
       "source": "urdf-obj",
       "urdf": "asset/demo/bedside_table012/object.urdf",
       "meshBasePath": "asset/demo/bedside_table012/"
+    },
+    {
+      "id": "bookcase005",
+      "title": "Bookcase 005",
+      "thumbnail": "asset/demo/bookcase005/input.png",
+      "source": "urdf-obj",
+      "urdf": "asset/demo/bookcase005/object.urdf",
+      "meshBasePath": "asset/demo/bookcase005/"
+    },
+    {
+      "id": "computer001",
+      "title": "Computer 001",
+      "thumbnail": "asset/demo/computer001/input.png",
+      "source": "urdf-obj",
+      "urdf": "asset/demo/computer001/object.urdf",
+      "meshBasePath": "asset/demo/computer001/"
+    },
+    {
+      "id": "dressing_table001",
+      "title": "Dressing Table 001",
+      "thumbnail": "asset/demo/dressing_table001/input.png",
+      "source": "urdf-obj",
+      "urdf": "asset/demo/dressing_table001/object.urdf",
+      "meshBasePath": "asset/demo/dressing_table001/"
+    },
+    {
+      "id": "file_9",
+      "title": "File 9",
+      "thumbnail": "asset/demo/file_9/input.png",
+      "source": "urdf-obj",
+      "urdf": "asset/demo/file_9/object.urdf",
+      "meshBasePath": "asset/demo/file_9/"
     }
   ]
 }
