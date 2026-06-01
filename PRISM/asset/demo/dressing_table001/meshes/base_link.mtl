@@ -1,0 +1,31 @@
+newmtl slightly_warm_drawer_gray_003
+Kd 0.76 0.74 0.7
+Ka 0 0 0
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl soft_silver_metal_003
+Kd 0.82 0.82 0.8
+Ka 0 0 0
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl subtle_translucent_mirror_glass_003
+Kd 0.64 0.72 0.78
+Ka 0 0 0
+Ks 0.05 0.05 0.05
+Ns 20
+d 0.28
+Tr 0.72
+
+newmtl tan_wood_panel_003
+Kd 0.57 0.45 0.3
+Ka 0 0 0
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl warm_light_gray_plastic_003
+Kd 0.72 0.71 0.68
+Ka 0 0 0
+Ks 0.05 0.05 0.05
+Ns 20

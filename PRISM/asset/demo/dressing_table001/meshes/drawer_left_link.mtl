@@ -1,0 +1,17 @@
+newmtl dark_handle_black_003
+Kd 0.015 0.013 0.012
+Ka 0 0 0
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl raised_trim_light_gray_003
+Kd 0.82 0.8 0.76
+Ka 0 0 0
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl slightly_warm_drawer_gray_003
+Kd 0.76 0.74 0.7
+Ka 0 0 0
+Ks 0.05 0.05 0.05
+Ns 20

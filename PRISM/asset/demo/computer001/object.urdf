@@ -1,0 +1,1844 @@
+<?xml version="1.0"?>
+<robot name="computer001">
+
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.5"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/base_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/base_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="screen_lid_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.5"/>
+      <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.005"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/screen_lid_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/screen_lid_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="trackpad_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.03"/>
+      <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/trackpad_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/trackpad_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_0_0_esc_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_0_esc_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_0_esc_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_0_1_F1_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_1_F1_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_1_F1_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_0_2_F2_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_2_F2_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_2_F2_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_0_3_F3_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_3_F3_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_3_F3_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_0_4_F4_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_4_F4_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_4_F4_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_0_5_F5_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_5_F5_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_5_F5_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_0_6_F6_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_6_F6_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_6_F6_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_0_7_F7_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_7_F7_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_7_F7_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_0_8_F8_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_8_F8_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_8_F8_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_0_9_F9_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_9_F9_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_9_F9_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_0_10_F10_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_10_F10_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_10_F10_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_0_11_F11_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_11_F11_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_11_F11_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_0_12_F12_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_12_F12_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_0_12_F12_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_1_0_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_0_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_0_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_1_1_1_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_1_1_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_1_1_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_1_2_2_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_2_2_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_2_2_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_1_3_3_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_3_3_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_3_3_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_1_4_4_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_4_4_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_4_4_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_1_5_5_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_5_5_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_5_5_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_1_6_6_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_6_6_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_6_6_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_1_7_7_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_7_7_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_7_7_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_1_8_8_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_8_8_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_8_8_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_1_9_9_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_9_9_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_9_9_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_1_10_0_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_10_0_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_10_0_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_1_11_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_11_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_11_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_1_12_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_12_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_12_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_1_13_del_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_13_del_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_1_13_del_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_2_0_tab_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_0_tab_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_0_tab_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_2_1_Q_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_1_Q_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_1_Q_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_2_2_W_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_2_W_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_2_W_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_2_3_E_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_3_E_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_3_E_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_2_4_R_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_4_R_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_4_R_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_2_5_T_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_5_T_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_5_T_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_2_6_Y_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_6_Y_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_6_Y_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_2_7_U_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_7_U_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_7_U_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_2_8_I_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_8_I_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_8_I_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_2_9_O_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_9_O_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_9_O_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_2_10_P_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_10_P_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_10_P_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_2_11_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_11_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_11_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_2_12_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_12_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_2_12_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_3_0_caps_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_0_caps_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_0_caps_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_3_1_A_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_1_A_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_1_A_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_3_2_S_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_2_S_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_2_S_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_3_3_D_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_3_D_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_3_D_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_3_4_F_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_4_F_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_4_F_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_3_5_G_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_5_G_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_5_G_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_3_6_H_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_6_H_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_6_H_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_3_7_J_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_7_J_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_7_J_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_3_8_K_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_8_K_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_8_K_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_3_9_L_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_9_L_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_9_L_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_3_10_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_10_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_10_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_3_11_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_11_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_3_11_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_4_0_shift_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_0_shift_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_0_shift_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_4_1_Z_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_1_Z_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_1_Z_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_4_2_X_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_2_X_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_2_X_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_4_3_C_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_3_C_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_3_C_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_4_4_V_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_4_V_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_4_V_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_4_5_B_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_5_B_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_5_B_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_4_6_N_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_6_N_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_6_N_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_4_7_M_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_7_M_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_7_M_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_4_8_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_8_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_8_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_4_9_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_9_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_9_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_4_10_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_10_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_10_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_4_11_shift_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_11_shift_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_4_11_shift_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_bottom_0_fn_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_0_fn_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_0_fn_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_bottom_1_ctrl_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_1_ctrl_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_1_ctrl_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_bottom_2_alt_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_2_alt_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_2_alt_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_bottom_3_cmd_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_3_cmd_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_3_cmd_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_bottom_4_space_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_4_space_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_4_space_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_bottom_5_cmd_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_5_cmd_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_5_cmd_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_bottom_6_alt_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_6_alt_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_6_alt_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_bottom_7_left_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_7_left_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_7_left_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_bottom_8_down_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_8_down_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_8_down_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <link name="keyboard_key_bottom_9_right_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.004"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_9_right_link.obj" scale="1 1 1"/></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><mesh filename="meshes/keyboard_key_bottom_9_right_link.obj" scale="1 1 1"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="display_lid_hinge_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="screen_lid_link"/>
+    <origin xyz="0 0.261999995 0.0540000014" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0" upper="1.2" effort="5" velocity="1"/>
+  </joint>
+
+  <joint name="trackpad_click_joint" type="prismatic">
+    <parent link="base_link"/>
+    <child link="trackpad_link"/>
+    <origin xyz="0 -0.165000007 0.0544999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.003" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_0_0_esc" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_0_0_esc_link"/>
+    <origin xyz="-0.275999993 0.189999998 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_0_1_F1" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_0_1_F1_link"/>
+    <origin xyz="-0.230000004 0.189999998 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_0_2_F2" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_0_2_F2_link"/>
+    <origin xyz="-0.184 0.189999998 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_0_3_F3" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_0_3_F3_link"/>
+    <origin xyz="-0.137999997 0.189999998 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_0_4_F4" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_0_4_F4_link"/>
+    <origin xyz="-0.0920000002 0.189999998 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_0_5_F5" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_0_5_F5_link"/>
+    <origin xyz="-0.0460000001 0.189999998 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_0_6_F6" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_0_6_F6_link"/>
+    <origin xyz="0 0.189999998 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_0_7_F7" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_0_7_F7_link"/>
+    <origin xyz="0.0460000001 0.189999998 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_0_8_F8" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_0_8_F8_link"/>
+    <origin xyz="0.0920000002 0.189999998 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_0_9_F9" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_0_9_F9_link"/>
+    <origin xyz="0.137999997 0.189999998 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_0_10_F10" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_0_10_F10_link"/>
+    <origin xyz="0.184 0.189999998 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_0_11_F11" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_0_11_F11_link"/>
+    <origin xyz="0.230000004 0.189999998 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_0_12_F12" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_0_12_F12_link"/>
+    <origin xyz="0.275999993 0.189999998 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_1_0" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_1_0_link"/>
+    <origin xyz="-0.318500012 0.150000006 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_1_1_1" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_1_1_1_link"/>
+    <origin xyz="-0.269499987 0.150000006 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_1_2_2" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_1_2_2_link"/>
+    <origin xyz="-0.220500007 0.150000006 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_1_3_3" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_1_3_3_link"/>
+    <origin xyz="-0.171499997 0.150000006 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_1_4_4" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_1_4_4_link"/>
+    <origin xyz="-0.122500002 0.150000006 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_1_5_5" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_1_5_5_link"/>
+    <origin xyz="-0.0734999999 0.150000006 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_1_6_6" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_1_6_6_link"/>
+    <origin xyz="-0.0244999994 0.150000006 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_1_7_7" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_1_7_7_link"/>
+    <origin xyz="0.0244999994 0.150000006 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_1_8_8" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_1_8_8_link"/>
+    <origin xyz="0.0734999999 0.150000006 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_1_9_9" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_1_9_9_link"/>
+    <origin xyz="0.122500002 0.150000006 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_1_10_0" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_1_10_0_link"/>
+    <origin xyz="0.171499997 0.150000006 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_1_11" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_1_11_link"/>
+    <origin xyz="0.220500007 0.150000006 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_1_12" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_1_12_link"/>
+    <origin xyz="0.269499987 0.150000006 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_1_13_del" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_1_13_del_link"/>
+    <origin xyz="0.318500012 0.150000006 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_2_0_tab" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_2_0_tab_link"/>
+    <origin xyz="-0.287999988 0.108000003 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_2_1_Q" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_2_1_Q_link"/>
+    <origin xyz="-0.237000003 0.108000003 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_2_2_W" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_2_2_W_link"/>
+    <origin xyz="-0.186000004 0.108000003 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_2_3_E" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_2_3_E_link"/>
+    <origin xyz="-0.135000005 0.108000003 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_2_4_R" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_2_4_R_link"/>
+    <origin xyz="-0.0839999989 0.108000003 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_2_5_T" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_2_5_T_link"/>
+    <origin xyz="-0.0329999998 0.108000003 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_2_6_Y" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_2_6_Y_link"/>
+    <origin xyz="0.0179999992 0.108000003 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_2_7_U" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_2_7_U_link"/>
+    <origin xyz="0.0689999983 0.108000003 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_2_8_I" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_2_8_I_link"/>
+    <origin xyz="0.119999997 0.108000003 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_2_9_O" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_2_9_O_link"/>
+    <origin xyz="0.171000004 0.108000003 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_2_10_P" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_2_10_P_link"/>
+    <origin xyz="0.222000003 0.108000003 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_2_11" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_2_11_link"/>
+    <origin xyz="0.273000002 0.108000003 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_2_12" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_2_12_link"/>
+    <origin xyz="0.324000001 0.108000003 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_3_0_caps" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_3_0_caps_link"/>
+    <origin xyz="-0.291500002 0.0659999996 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_3_1_A" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_3_1_A_link"/>
+    <origin xyz="-0.238499999 0.0659999996 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_3_2_S" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_3_2_S_link"/>
+    <origin xyz="-0.185499996 0.0659999996 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_3_3_D" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_3_3_D_link"/>
+    <origin xyz="-0.132499993 0.0659999996 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_3_4_F" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_3_4_F_link"/>
+    <origin xyz="-0.0794999972 0.0659999996 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_3_5_G" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_3_5_G_link"/>
+    <origin xyz="-0.0264999997 0.0659999996 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_3_6_H" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_3_6_H_link"/>
+    <origin xyz="0.0264999997 0.0659999996 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_3_7_J" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_3_7_J_link"/>
+    <origin xyz="0.0794999972 0.0659999996 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_3_8_K" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_3_8_K_link"/>
+    <origin xyz="0.132499993 0.0659999996 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_3_9_L" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_3_9_L_link"/>
+    <origin xyz="0.185499996 0.0659999996 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_3_10" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_3_10_link"/>
+    <origin xyz="0.238499999 0.0659999996 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_3_11" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_3_11_link"/>
+    <origin xyz="0.291500002 0.0659999996 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_4_0_shift" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_4_0_shift_link"/>
+    <origin xyz="-0.291500002 0.0240000002 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_4_1_Z" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_4_1_Z_link"/>
+    <origin xyz="-0.238499999 0.0240000002 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_4_2_X" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_4_2_X_link"/>
+    <origin xyz="-0.185499996 0.0240000002 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_4_3_C" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_4_3_C_link"/>
+    <origin xyz="-0.132499993 0.0240000002 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_4_4_V" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_4_4_V_link"/>
+    <origin xyz="-0.0794999972 0.0240000002 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_4_5_B" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_4_5_B_link"/>
+    <origin xyz="-0.0264999997 0.0240000002 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_4_6_N" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_4_6_N_link"/>
+    <origin xyz="0.0264999997 0.0240000002 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_4_7_M" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_4_7_M_link"/>
+    <origin xyz="0.0794999972 0.0240000002 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_4_8" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_4_8_link"/>
+    <origin xyz="0.132499993 0.0240000002 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_4_9" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_4_9_link"/>
+    <origin xyz="0.185499996 0.0240000002 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_4_10" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_4_10_link"/>
+    <origin xyz="0.238499999 0.0240000002 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_4_11_shift" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_4_11_shift_link"/>
+    <origin xyz="0.291500002 0.0240000002 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_bottom_0_fn" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_bottom_0_fn_link"/>
+    <origin xyz="-0.308999985 -0.0219999999 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_bottom_1_ctrl" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_bottom_1_ctrl_link"/>
+    <origin xyz="-0.260500014 -0.0219999999 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_bottom_2_alt" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_bottom_2_alt_link"/>
+    <origin xyz="-0.2095 -0.0219999999 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_bottom_3_cmd" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_bottom_3_cmd_link"/>
+    <origin xyz="-0.153500006 -0.0219999999 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_bottom_4_space" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_bottom_4_space_link"/>
+    <origin xyz="-0.0175000001 -0.0219999999 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_bottom_5_cmd" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_bottom_5_cmd_link"/>
+    <origin xyz="0.118500002 -0.0219999999 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_bottom_6_alt" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_bottom_6_alt_link"/>
+    <origin xyz="0.174500003 -0.0219999999 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_bottom_7_left" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_bottom_7_left_link"/>
+    <origin xyz="0.222000003 -0.0219999999 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_bottom_8_down" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_bottom_8_down_link"/>
+    <origin xyz="0.266000003 -0.0219999999 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+  <joint name="press_keyboard_key_bottom_9_right" type="prismatic">
+    <parent link="base_link"/>
+    <child link="keyboard_key_bottom_9_right_link"/>
+    <origin xyz="0.310000002 -0.0219999999 0.0599999987" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="0" upper="0.006" effort="1" velocity="0.05"/>
+  </joint>
+
+</robot>

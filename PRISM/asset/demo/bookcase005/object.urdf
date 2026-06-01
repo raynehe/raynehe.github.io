@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<robot name="bookcase005">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="8"/>
+      <inertia ixx="0.08" ixy="0" ixz="0" iyy="0.08" iyz="0" izz="0.08"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/base_link.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="pale_beech_wood">
+        <color rgba="0.72 0.48 0.28 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/base_link.obj" scale="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="drawer_upper_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.8"/>
+      <inertia ixx="0.008" ixy="0" ixz="0" iyy="0.008" iyz="0" izz="0.008"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/drawer_upper_link.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="pale_beech_wood">
+        <color rgba="0.72 0.48 0.28 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/drawer_upper_link.obj" scale="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="drawer_lower_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.8"/>
+      <inertia ixx="0.008" ixy="0" ixz="0" iyy="0.008" iyz="0" izz="0.008"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/drawer_lower_link.obj" scale="1 1 1"/>
+      </geometry>
+      <material name="pale_beech_wood">
+        <color rgba="0.72 0.48 0.28 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/drawer_lower_link.obj" scale="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="upper_drawer_slide_joint" type="prismatic">
+    <parent link="base_link"/>
+    <child link="drawer_upper_link"/>
+    <origin xyz="0 -0.224999994 0.850000024" rpy="0 0 0"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="0" upper="0.3" effort="50" velocity="0.5"/>
+  </joint>
+
+  <joint name="lower_drawer_slide_joint" type="prismatic">
+    <parent link="base_link"/>
+    <child link="drawer_lower_link"/>
+    <origin xyz="0 -0.224999994 0.665000021" rpy="0 0 0"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="0" upper="0.3" effort="50" velocity="0.5"/>
+  </joint>
+</robot>

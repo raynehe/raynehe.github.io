@@ -1,0 +1,66 @@
+newmtl brushed_light_silver_003
+Kd 0.69999999 0.69999999 0.68000001
+Ka 0.175 0.175 0.17
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl glossy_black_screen_003
+Kd 0 0 0
+Ka 0 0 0
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl matte_black_keycaps_003
+Kd 0.0049999999 0.0049999999 0.0060000001
+Ka 0.00125 0.00125 0.0015
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl monitor_blue_003
+Kd 0.1 0.5 1
+Ka 0.025 0.125 0.25
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl monitor_cyan_003
+Kd 0 0.75 0.94999999
+Ka 0 0.1875 0.2375
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl monitor_dim_green_003
+Kd 0 0.34999999 0.07
+Ka 0 0.087499999 0.0175
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl monitor_green_003
+Kd 0 0.94999999 0.1
+Ka 0 0.2375 0.025
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl monitor_magenta_003
+Kd 0.94999999 0 0.85000002
+Ka 0.2375 0 0.21250001
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl monitor_yellow_003
+Kd 1 0.94999999 0.15000001
+Ka 0.25 0.2375 0.037500001
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl screen_white_text_003
+Kd 0.89999998 0.94999999 0.92000002
+Ka 0.22499999 0.2375 0.23
+Ks 0.05 0.05 0.05
+Ns 20
+
+newmtl shadowed_silver_edge_003
+Kd 0.47999999 0.47999999 0.46000001
+Ka 0.12 0.12 0.115
+Ks 0.05 0.05 0.05
+Ns 20
+
