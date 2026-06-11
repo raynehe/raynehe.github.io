@@ -719,13 +719,16 @@ h1 {
   background: #ffffff;
 }
 
-.scene-reconstruction-figure,
-.scene-reconstruction-figure img {
+.result-gallery .scene-reconstruction-figure,
+.result-gallery .real-captured-reconstruction-panel {
+  max-width: 760px;
+  margin-inline: auto;
   background: #000000;
 }
 
-.scene-reconstruction-figure {
-  max-width: 760px;
+.scene-reconstruction-figure img,
+.real-captured-reconstruction-panel img {
+  background: #000000;
 }
 
 .scene-reconstruction-caption {
@@ -741,20 +744,14 @@ h1 {
 
 .real-captured-reconstruction-panel {
   width: 100%;
-  margin: 0;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #000000;
-  box-shadow: var(--shadow);
 }
 
 .real-captured-media-row {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(14rem, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
   align-items: stretch;
-  padding: 1rem;
+  background: #000000;
 }
 
 .real-captured-media-row img,
@@ -764,11 +761,10 @@ h1 {
   height: 100%;
   object-fit: contain;
   background: #000000;
-  border-radius: 6px;
 }
 
 .real-captured-media-row img {
-  aspect-ratio: 3177 / 2087;
+  aspect-ratio: 1566 / 2087;
 }
 
 .real-captured-media-row video {
