@@ -709,6 +709,44 @@ h1 {
   margin-inline: auto;
 }
 
+.comparison-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+  align-items: start;
+  width: min(100%, 1020px);
+  margin-inline: auto;
+}
+
+.comparison-gallery .comparison-figure {
+  width: 100%;
+  background: #ffffff;
+  margin-inline: auto;
+}
+
+.comparison-gallery .comparison-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+}
+
+.comparison-caption {
+  padding: 0.85rem 1.1rem 1rem;
+  color: var(--muted);
+  background: rgba(20, 31, 45, 0.92);
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.comparison-caption strong {
+  color: var(--text);
+  font-weight: 750;
+  margin-right: 0.25rem;
+}
+
 .result-gallery .figure-panel {
   width: 100%;
   background: #ffffff;
